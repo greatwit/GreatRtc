@@ -16,7 +16,7 @@ LOCAL_PATH := $(call my-dir)
 
 include $(CLEAR_VARS)
 
-LOCAL_CFLAGS += -DWEBRTC_ANDROID
+LOCAL_CFLAGS += -DWEBRTC_ANDROID -DWEBRTC_CLOCK_TYPE_REALTIME
 
 LOCAL_CPP_EXTENSION := .cc
 
@@ -65,8 +65,6 @@ LOCAL_C_INCLUDES := \
     system/core/include/cutils
 
 LOCAL_SHARED_LIBRARIES := \
-    libcutils \
-    libdl \
     libstlport
 
 LOCAL_STATIC_LIBRARIES := cpufeatures
